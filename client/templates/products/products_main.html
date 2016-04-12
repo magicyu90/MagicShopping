@@ -1,0 +1,76 @@
+<template name="productsMain">
+
+        <div class="productsMain" id="productsMain">
+            <div class="centered-table">
+
+                <div class="content-table">
+
+                    <h1 class="siteName">Magic Shopping</h1>
+                    <div class="container-fluid">
+                        <a href="#" class="btn-more">Explore More</a>
+                        <br/>
+                        <br/>
+                        <img style="margin-top: 100px;" class="home-arrow action" src="images/arrow-down.png"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="homeText">
+            <div class="row-fluid">
+                <div class="centered-table">
+                    <div class="content-table">
+                        <h2 class="featured-header">Exploration meets nice products</h2>
+
+                        <div class="shoppingText" style="margin-top:20px;display: block">
+                            <p>We are sailing travel specialists with curated itineraries worldwide. Our journeys are
+                                crewed
+                                by a team
+                                of dynamic world travelers accomodating and providing the comfort for epic adventures.
+                                Living on modern
+                                sailboats with up to 8 travelers aboard, we spend our days sailing from island to
+                                islands
+                                experiencing a
+                                way of life few have the pleasures of enjoying. To book a private cabin aboard a group
+                                organized boat or
+                                to charter a private boat with a group of your friends and loved onces, contact us
+                                today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{#each categories}}
+            {{>categoryItem}}
+        {{/each}}
+
+        <div class="container-fluid">
+            <div class="row-fluid" style="height: 300px;padding:0 30px">
+                <div class="centered-table">
+                    <div class="content-table buffer">
+                        <a href="/products" class="btn btn-wide btn-inverse trans">View All Products</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+</template>
+
+
+<template name="categoryItem">
+
+    <a href="#" style="height: 350px;display: block;text-decoration: none">
+        <div class="row-fluid categories" style="height: inherit;background-image: url({{url}})">
+            <div class="centered-table">
+                <div class="content-table">
+                    <h2>{{title}}</h2>
+                    <button class="btn btn-small trans text-shadow box-shadow">Lets Go</button>
+                </div>
+            </div>
+        </div>
+    </a>
+</template>
