@@ -10,7 +10,34 @@
         </div>
     </div>
 
-    <div style="height: 500px">
+    <div class="grid">
+        <div class="grid-row buffer-thumbnails dropdowns">
+
+            {{#each products}}
+                {{>productItem}}
+            {{/each}}
+
+        </div>
 
     </div>
+</template>
+
+<template name=".buffer-thumbnails .dropdowns">
+
+    <div class="productRow">
+        {{#each row}}
+            {{>productItem}}
+        {{/each}}
+    </div>
+
+</template>
+
+
+<template name="productItem">
+    <div class="span4">
+        <a href="#" class="item"><img width="" src="images/products/fake-product.jpg"></a>
+        <!--<h3><a href="#"> {{name}} </a></h3>-->
+        <p>{{price}} $</p>
+    </div>
+
 </template>
